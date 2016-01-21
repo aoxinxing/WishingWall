@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="user" extends="struts-default">
+		<action name="script" class="com.action.ScriptAction">
+			<result name="scriptQuery">/wishingWall.jsp</result>
+			<result name="scriptAdd">/scripAdd_ok.jsp</result>
+			<result name="holdoutAdd">/holdoutAdd.jsp</result>
+			<result name="scriptList">/scriptList.jsp</result>
+			<result name="scrollScript">/scrollScrip_ok.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="pictureCheckCode" class="com.action.PictureCheckCodeAction">
+		
+			<result name="success" type="stream">
+                    <param name="contentType">image/jpeg</param>
+                    <param name="inputName">inputStream</param>
+            </result>
+		</action>
+	</package>
+</struts>  
+
+  
